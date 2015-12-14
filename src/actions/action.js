@@ -3,5 +3,5 @@ export function action(msg) {
   return {
     type: ACTION,
     msg: msg
-  }
+  };
 }
