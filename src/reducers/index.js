@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
 import reducer from './reducer';
-
-export default combineReducers({reducer});
+import {routeReducer} from 'redux-simple-router';
+export default combineReducers(Object.assign({}, {reducer}, {
+  routing: routeReducer
+}));
