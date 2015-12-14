@@ -6,7 +6,7 @@ var path = require('path');
 var buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
-	devtool: 'source-map',
+	devtool: 'cheap-module-eval-source-map',
 	devServer: {
 		contentBase: 'public'
 	},
@@ -37,13 +37,13 @@ module.exports = {
         loader: 'json'
       },
 			{
-				test: /\.jsx?$/,
-				loaders: ['react-hot', 'babel?stage=0&optional[]=runtime&cacheDirectory'],
+				test: /\.js$/,
+				loaders:	['react-hot', 'babel?presets[]=react,presets[]=es2015,presets[]=stage-0'],
 				exclude: /node_modules/
 			},
 			{
-        test: /\.scss$/,
-        loader: 'style!css!sass'
+				test: /\.scss$/,
+				loader: 'style!css!sass'
 			},
 			{
 				test: /\.css/, loader: "style!css"
