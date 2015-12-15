@@ -1,0 +1,30 @@
+html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: black;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 100%;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
